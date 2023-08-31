@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+
+	grid-template-areas:
+		"header header header"
+		"contenido contenido sidebar"
+		"widget-1 widget-2 sidebar"
+		"footer footer footer";
+}
+
+.contenedor>div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+/* .sidebar {
+	width: 300px;
+} */
+
+.contenedor .footer {
+	background: #494847;
+	color: #fff;
+	grid-area: footer;
+	padding: 7px;
+	border-radius: 4px;
+	font-size: small;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .header {
+	background: #186f2a;
+	color: #fff;
+	grid-area: header;
+	text-align: center;
+}
+
+.contenedor .contenido {
+	grid-area: contenido;
+	background: #FFFFFF;
+	min-height: 350px;
+	/* color: #293500; */
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background: #9d071e;
+	color: #fff;
+	display: flex;
+	text-align: justify;
+	align-items: start;
+	justify-content: center;
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background: #FFFFFF;
+	color: #fff;
+	height: 100px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .widget-1 {
+	grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.contenedor {
+		grid-template-areas:
+			"header header header"
+			"contenido contenido contenido"
+			"sidebar sidebar sidebar"
+			"widget-1 widget-1 widget-2"
+			"footer footer footer";
+	}
+}
+
+.containerform {
+
+	position: absolute;
+	left: 220px;
+	top: 55px;
+	right: 55px;
+}
+
+.personalReg {
+	position: absolute;
+	top: 40px;
+	left: -10px;
+	right: -10px;
+}
+
+.formulario {
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	right: 30px;
+}
